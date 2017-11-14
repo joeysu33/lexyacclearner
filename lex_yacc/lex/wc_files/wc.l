@@ -42,6 +42,11 @@ void closefile() {
 }
 
 int main(int argc, char *argv[]) {
+  g_oldstdin = yyin;
+  g_currentfile = 0;
+  g_filecount = argc - 1;
+  g_filename = &argv[1];
+
   if(argc < 2 ) {
     /*!文件数据来自stdin*/
     yylex();
@@ -49,10 +54,6 @@ int main(int argc, char *argv[]) {
     return 0;
   }
 
-  g_currentfile = 0;
-  g_filecount = argc - 1;
-  g_filename = &argv[1];
-  g_oldstdin = yyin;
 
   //yydebug仅在yacc中可以使用
   //yydebug = 1;
@@ -77,6 +78,7 @@ int main(int argc, char *argv[]) {
 int yywrap() {
   static int times = 0;
   //fprintf(stdout, "call yywrap %d times\n", ++times);
+  if(g_filecount <= 0) return 1;
 
   for(; g_filecount > 0; g_filecount--) {
     if(!g_filename[g_currentfile]) {
