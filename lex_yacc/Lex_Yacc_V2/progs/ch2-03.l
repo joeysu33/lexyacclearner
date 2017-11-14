@@ -78,7 +78,8 @@ char **argv;
 
 yywrap()
 {
-	FILE *file;
+  /*!原代码并没有初始化file,导致执行的时候会假死*/
+	FILE *file = NULL;
 
 	if ((currentFile != 0) && (nFiles > 1) && (currentFile < nFiles)) {
 		/*
