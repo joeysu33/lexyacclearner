@@ -1,0 +1,300 @@
+状态 7 conflicts: 2 shift/reduce
+状态 8 conflicts: 2 shift/reduce
+
+
+语法
+
+    0 $accept: complicated_sentence $end
+
+    1 complicated_sentence: setence
+    2                     | complicated_sentence setence
+
+    3 setence: subject VERB object
+    4        | simple_declare
+    5        | complicated_declare
+
+    6 subject: NOUN
+    7        | PRONOUN
+
+    8 object: NOUN
+
+    9 complicated_declare: simple_declare words
+   10                    | complicated_declare words
+
+   11 simple_declare: declare words
+
+   12 declare: DECLARE
+
+   13 words: NOUN
+   14      | PRONOUN
+   15      | VERB
+   16      | PREPOSITION
+   17      | ADJECTIVE
+   18      | ADVERB
+   19      | CONJUNCTION
+
+
+Terminals, with rules where they appear
+
+$end (0) 0
+error (256)
+NOUN (258) 6 8 13
+PRONOUN (259) 7 14
+VERB (260) 3 15
+PREPOSITION (261) 16
+ADJECTIVE (262) 17
+ADVERB (263) 18
+CONJUNCTION (264) 19
+DECLARE (265) 12
+
+
+Nonterminals, with rules where they appear
+
+$accept (11)
+    左： 0
+complicated_sentence (12)
+    左： 1 2, 右： 0 2
+setence (13)
+    左： 3 4 5, 右： 1 2
+subject (14)
+    左： 6 7, 右： 3
+object (15)
+    左： 8, 右： 3
+complicated_declare (16)
+    左： 9 10, 右： 5 10
+simple_declare (17)
+    左： 11, 右： 4 9
+declare (18)
+    左： 12, 右： 11
+words (19)
+    左： 13 14 15 16 17 18 19, 右： 9 10 11
+
+
+State 0
+
+    0 $accept: . complicated_sentence $end
+
+    NOUN     shift, and go to state 1
+    PRONOUN  shift, and go to state 2
+    DECLARE  shift, and go to state 3
+
+    complicated_sentence  转到状态 4
+    setence               转到状态 5
+    subject               转到状态 6
+    complicated_declare   转到状态 7
+    simple_declare        转到状态 8
+    declare               转到状态 9
+
+
+State 1
+
+    6 subject: NOUN .
+
+    $default  reduce using rule 6 (subject)
+
+
+State 2
+
+    7 subject: PRONOUN .
+
+    $default  reduce using rule 7 (subject)
+
+
+State 3
+
+   12 declare: DECLARE .
+
+    $default  reduce using rule 12 (declare)
+
+
+State 4
+
+    0 $accept: complicated_sentence . $end
+    2 complicated_sentence: complicated_sentence . setence
+
+    $end     shift, and go to state 10
+    NOUN     shift, and go to state 1
+    PRONOUN  shift, and go to state 2
+    DECLARE  shift, and go to state 3
+
+    setence              转到状态 11
+    subject              转到状态 6
+    complicated_declare  转到状态 7
+    simple_declare       转到状态 8
+    declare              转到状态 9
+
+
+State 5
+
+    1 complicated_sentence: setence .
+
+    $default  reduce using rule 1 (complicated_sentence)
+
+
+State 6
+
+    3 setence: subject . VERB object
+
+    VERB  shift, and go to state 12
+
+
+State 7
+
+    5 setence: complicated_declare .
+   10 complicated_declare: complicated_declare . words
+
+    NOUN         shift, and go to state 13
+    PRONOUN      shift, and go to state 14
+    VERB         shift, and go to state 15
+    PREPOSITION  shift, and go to state 16
+    ADJECTIVE    shift, and go to state 17
+    ADVERB       shift, and go to state 18
+    CONJUNCTION  shift, and go to state 19
+
+    NOUN      [reduce using rule 5 (setence)]
+    PRONOUN   [reduce using rule 5 (setence)]
+    $default  reduce using rule 5 (setence)
+
+    words  转到状态 20
+
+
+State 8
+
+    4 setence: simple_declare .
+    9 complicated_declare: simple_declare . words
+
+    NOUN         shift, and go to state 13
+    PRONOUN      shift, and go to state 14
+    VERB         shift, and go to state 15
+    PREPOSITION  shift, and go to state 16
+    ADJECTIVE    shift, and go to state 17
+    ADVERB       shift, and go to state 18
+    CONJUNCTION  shift, and go to state 19
+
+    NOUN      [reduce using rule 4 (setence)]
+    PRONOUN   [reduce using rule 4 (setence)]
+    $default  reduce using rule 4 (setence)
+
+    words  转到状态 21
+
+
+State 9
+
+   11 simple_declare: declare . words
+
+    NOUN         shift, and go to state 13
+    PRONOUN      shift, and go to state 14
+    VERB         shift, and go to state 15
+    PREPOSITION  shift, and go to state 16
+    ADJECTIVE    shift, and go to state 17
+    ADVERB       shift, and go to state 18
+    CONJUNCTION  shift, and go to state 19
+
+    words  转到状态 22
+
+
+State 10
+
+    0 $accept: complicated_sentence $end .
+
+    $default  接受
+
+
+State 11
+
+    2 complicated_sentence: complicated_sentence setence .
+
+    $default  reduce using rule 2 (complicated_sentence)
+
+
+State 12
+
+    3 setence: subject VERB . object
+
+    NOUN  shift, and go to state 23
+
+    object  转到状态 24
+
+
+State 13
+
+   13 words: NOUN .
+
+    $default  reduce using rule 13 (words)
+
+
+State 14
+
+   14 words: PRONOUN .
+
+    $default  reduce using rule 14 (words)
+
+
+State 15
+
+   15 words: VERB .
+
+    $default  reduce using rule 15 (words)
+
+
+State 16
+
+   16 words: PREPOSITION .
+
+    $default  reduce using rule 16 (words)
+
+
+State 17
+
+   17 words: ADJECTIVE .
+
+    $default  reduce using rule 17 (words)
+
+
+State 18
+
+   18 words: ADVERB .
+
+    $default  reduce using rule 18 (words)
+
+
+State 19
+
+   19 words: CONJUNCTION .
+
+    $default  reduce using rule 19 (words)
+
+
+State 20
+
+   10 complicated_declare: complicated_declare words .
+
+    $default  reduce using rule 10 (complicated_declare)
+
+
+State 21
+
+    9 complicated_declare: simple_declare words .
+
+    $default  reduce using rule 9 (complicated_declare)
+
+
+State 22
+
+   11 simple_declare: declare words .
+
+    $default  reduce using rule 11 (simple_declare)
+
+
+State 23
+
+    8 object: NOUN .
+
+    $default  reduce using rule 8 (object)
+
+
+State 24
+
+    3 setence: subject VERB object .
+
+    $default  reduce using rule 3 (setence)

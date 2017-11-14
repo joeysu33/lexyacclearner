@@ -1,0 +1,4 @@
+noun dog
+verb is
+pronoun this
+this is dog

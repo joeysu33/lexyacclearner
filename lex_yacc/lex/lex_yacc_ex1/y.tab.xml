@@ -1,0 +1,619 @@
+<?xml version="1.0"?>
+
+<bison-xml-report version="3.0.4" bug-report="bug-bison@gnu.org" url="http://www.gnu.org/software/bison/">
+
+  <filename>sym.y</filename>
+
+  <grammar>
+    <rules>
+      <rule number="0" usefulness="useful">
+        <lhs>$accept</lhs>
+        <rhs>
+          <symbol>complicated_sentence</symbol>
+          <symbol>$end</symbol>
+        </rhs>
+      </rule>
+      <rule number="1" usefulness="useful">
+        <lhs>complicated_sentence</lhs>
+        <rhs>
+          <symbol>setence</symbol>
+        </rhs>
+      </rule>
+      <rule number="2" usefulness="useful">
+        <lhs>complicated_sentence</lhs>
+        <rhs>
+          <symbol>complicated_sentence</symbol>
+          <symbol>setence</symbol>
+        </rhs>
+      </rule>
+      <rule number="3" usefulness="useful">
+        <lhs>setence</lhs>
+        <rhs>
+          <symbol>subject</symbol>
+          <symbol>VERB</symbol>
+          <symbol>object</symbol>
+        </rhs>
+      </rule>
+      <rule number="4" usefulness="useful">
+        <lhs>setence</lhs>
+        <rhs>
+          <symbol>simple_declare</symbol>
+        </rhs>
+      </rule>
+      <rule number="5" usefulness="useful">
+        <lhs>setence</lhs>
+        <rhs>
+          <symbol>complicated_declare</symbol>
+        </rhs>
+      </rule>
+      <rule number="6" usefulness="useful">
+        <lhs>subject</lhs>
+        <rhs>
+          <symbol>NOUN</symbol>
+        </rhs>
+      </rule>
+      <rule number="7" usefulness="useful">
+        <lhs>subject</lhs>
+        <rhs>
+          <symbol>PRONOUN</symbol>
+        </rhs>
+      </rule>
+      <rule number="8" usefulness="useful">
+        <lhs>object</lhs>
+        <rhs>
+          <symbol>NOUN</symbol>
+        </rhs>
+      </rule>
+      <rule number="9" usefulness="useful">
+        <lhs>complicated_declare</lhs>
+        <rhs>
+          <symbol>simple_declare</symbol>
+          <symbol>words</symbol>
+        </rhs>
+      </rule>
+      <rule number="10" usefulness="useful">
+        <lhs>complicated_declare</lhs>
+        <rhs>
+          <symbol>complicated_declare</symbol>
+          <symbol>words</symbol>
+        </rhs>
+      </rule>
+      <rule number="11" usefulness="useful">
+        <lhs>simple_declare</lhs>
+        <rhs>
+          <symbol>declare</symbol>
+          <symbol>words</symbol>
+        </rhs>
+      </rule>
+      <rule number="12" usefulness="useful">
+        <lhs>declare</lhs>
+        <rhs>
+          <symbol>DECLARE</symbol>
+        </rhs>
+      </rule>
+      <rule number="13" usefulness="useful">
+        <lhs>words</lhs>
+        <rhs>
+          <symbol>NOUN</symbol>
+        </rhs>
+      </rule>
+      <rule number="14" usefulness="useful">
+        <lhs>words</lhs>
+        <rhs>
+          <symbol>PRONOUN</symbol>
+        </rhs>
+      </rule>
+      <rule number="15" usefulness="useful">
+        <lhs>words</lhs>
+        <rhs>
+          <symbol>VERB</symbol>
+        </rhs>
+      </rule>
+      <rule number="16" usefulness="useful">
+        <lhs>words</lhs>
+        <rhs>
+          <symbol>PREPOSITION</symbol>
+        </rhs>
+      </rule>
+      <rule number="17" usefulness="useful">
+        <lhs>words</lhs>
+        <rhs>
+          <symbol>ADJECTIVE</symbol>
+        </rhs>
+      </rule>
+      <rule number="18" usefulness="useful">
+        <lhs>words</lhs>
+        <rhs>
+          <symbol>ADVERB</symbol>
+        </rhs>
+      </rule>
+      <rule number="19" usefulness="useful">
+        <lhs>words</lhs>
+        <rhs>
+          <symbol>CONJUNCTION</symbol>
+        </rhs>
+      </rule>
+    </rules>
+    <terminals>
+      <terminal symbol-number="0" token-number="0" name="$end" usefulness="useful"/>
+      <terminal symbol-number="1" token-number="256" name="error" usefulness="useful"/>
+      <terminal symbol-number="3" token-number="258" name="NOUN" usefulness="useful"/>
+      <terminal symbol-number="4" token-number="259" name="PRONOUN" usefulness="useful"/>
+      <terminal symbol-number="5" token-number="260" name="VERB" usefulness="useful"/>
+      <terminal symbol-number="6" token-number="261" name="PREPOSITION" usefulness="useful"/>
+      <terminal symbol-number="7" token-number="262" name="ADJECTIVE" usefulness="useful"/>
+      <terminal symbol-number="8" token-number="263" name="ADVERB" usefulness="useful"/>
+      <terminal symbol-number="9" token-number="264" name="CONJUNCTION" usefulness="useful"/>
+      <terminal symbol-number="10" token-number="265" name="DECLARE" usefulness="useful"/>
+    </terminals>
+    <nonterminals>
+      <nonterminal symbol-number="11" name="$accept" usefulness="useful"/>
+      <nonterminal symbol-number="12" name="complicated_sentence" usefulness="useful"/>
+      <nonterminal symbol-number="13" name="setence" usefulness="useful"/>
+      <nonterminal symbol-number="14" name="subject" usefulness="useful"/>
+      <nonterminal symbol-number="15" name="object" usefulness="useful"/>
+      <nonterminal symbol-number="16" name="complicated_declare" usefulness="useful"/>
+      <nonterminal symbol-number="17" name="simple_declare" usefulness="useful"/>
+      <nonterminal symbol-number="18" name="declare" usefulness="useful"/>
+      <nonterminal symbol-number="19" name="words" usefulness="useful"/>
+    </nonterminals>
+  </grammar>
+
+  <automaton>
+
+    <state number="0">
+      <itemset>
+        <item rule-number="0" point="0"/>
+        <item rule-number="1" point="0"/>
+        <item rule-number="2" point="0"/>
+        <item rule-number="3" point="0"/>
+        <item rule-number="4" point="0"/>
+        <item rule-number="5" point="0"/>
+        <item rule-number="6" point="0"/>
+        <item rule-number="7" point="0"/>
+        <item rule-number="9" point="0"/>
+        <item rule-number="10" point="0"/>
+        <item rule-number="11" point="0"/>
+        <item rule-number="12" point="0"/>
+      </itemset>
+      <actions>
+        <transitions>
+          <transition type="shift" symbol="NOUN" state="1"/>
+          <transition type="shift" symbol="PRONOUN" state="2"/>
+          <transition type="shift" symbol="DECLARE" state="3"/>
+          <transition type="goto" symbol="complicated_sentence" state="4"/>
+          <transition type="goto" symbol="setence" state="5"/>
+          <transition type="goto" symbol="subject" state="6"/>
+          <transition type="goto" symbol="complicated_declare" state="7"/>
+          <transition type="goto" symbol="simple_declare" state="8"/>
+          <transition type="goto" symbol="declare" state="9"/>
+        </transitions>
+        <errors/>
+        <reductions/>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="1">
+      <itemset>
+        <item rule-number="6" point="1"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="6" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="2">
+      <itemset>
+        <item rule-number="7" point="1"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="7" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="3">
+      <itemset>
+        <item rule-number="12" point="1"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="12" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="4">
+      <itemset>
+        <item rule-number="0" point="1"/>
+        <item rule-number="2" point="1"/>
+        <item rule-number="3" point="0"/>
+        <item rule-number="4" point="0"/>
+        <item rule-number="5" point="0"/>
+        <item rule-number="6" point="0"/>
+        <item rule-number="7" point="0"/>
+        <item rule-number="9" point="0"/>
+        <item rule-number="10" point="0"/>
+        <item rule-number="11" point="0"/>
+        <item rule-number="12" point="0"/>
+      </itemset>
+      <actions>
+        <transitions>
+          <transition type="shift" symbol="$end" state="10"/>
+          <transition type="shift" symbol="NOUN" state="1"/>
+          <transition type="shift" symbol="PRONOUN" state="2"/>
+          <transition type="shift" symbol="DECLARE" state="3"/>
+          <transition type="goto" symbol="setence" state="11"/>
+          <transition type="goto" symbol="subject" state="6"/>
+          <transition type="goto" symbol="complicated_declare" state="7"/>
+          <transition type="goto" symbol="simple_declare" state="8"/>
+          <transition type="goto" symbol="declare" state="9"/>
+        </transitions>
+        <errors/>
+        <reductions/>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="5">
+      <itemset>
+        <item rule-number="1" point="1"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="1" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="6">
+      <itemset>
+        <item rule-number="3" point="1"/>
+      </itemset>
+      <actions>
+        <transitions>
+          <transition type="shift" symbol="VERB" state="12"/>
+        </transitions>
+        <errors/>
+        <reductions/>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="7">
+      <itemset>
+        <item rule-number="5" point="1">
+          <lookaheads>
+            <symbol>$end</symbol>
+            <symbol>NOUN</symbol>
+            <symbol>PRONOUN</symbol>
+            <symbol>DECLARE</symbol>
+          </lookaheads>
+        </item>
+        <item rule-number="10" point="1"/>
+        <item rule-number="13" point="0"/>
+        <item rule-number="14" point="0"/>
+        <item rule-number="15" point="0"/>
+        <item rule-number="16" point="0"/>
+        <item rule-number="17" point="0"/>
+        <item rule-number="18" point="0"/>
+        <item rule-number="19" point="0"/>
+      </itemset>
+      <actions>
+        <transitions>
+          <transition type="shift" symbol="NOUN" state="13"/>
+          <transition type="shift" symbol="PRONOUN" state="14"/>
+          <transition type="shift" symbol="VERB" state="15"/>
+          <transition type="shift" symbol="PREPOSITION" state="16"/>
+          <transition type="shift" symbol="ADJECTIVE" state="17"/>
+          <transition type="shift" symbol="ADVERB" state="18"/>
+          <transition type="shift" symbol="CONJUNCTION" state="19"/>
+          <transition type="goto" symbol="words" state="20"/>
+        </transitions>
+        <errors/>
+        <reductions>
+          <reduction symbol="NOUN" rule="5" enabled="false"/>
+          <reduction symbol="PRONOUN" rule="5" enabled="false"/>
+          <reduction symbol="$default" rule="5" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="8">
+      <itemset>
+        <item rule-number="4" point="1">
+          <lookaheads>
+            <symbol>$end</symbol>
+            <symbol>NOUN</symbol>
+            <symbol>PRONOUN</symbol>
+            <symbol>DECLARE</symbol>
+          </lookaheads>
+        </item>
+        <item rule-number="9" point="1"/>
+        <item rule-number="13" point="0"/>
+        <item rule-number="14" point="0"/>
+        <item rule-number="15" point="0"/>
+        <item rule-number="16" point="0"/>
+        <item rule-number="17" point="0"/>
+        <item rule-number="18" point="0"/>
+        <item rule-number="19" point="0"/>
+      </itemset>
+      <actions>
+        <transitions>
+          <transition type="shift" symbol="NOUN" state="13"/>
+          <transition type="shift" symbol="PRONOUN" state="14"/>
+          <transition type="shift" symbol="VERB" state="15"/>
+          <transition type="shift" symbol="PREPOSITION" state="16"/>
+          <transition type="shift" symbol="ADJECTIVE" state="17"/>
+          <transition type="shift" symbol="ADVERB" state="18"/>
+          <transition type="shift" symbol="CONJUNCTION" state="19"/>
+          <transition type="goto" symbol="words" state="21"/>
+        </transitions>
+        <errors/>
+        <reductions>
+          <reduction symbol="NOUN" rule="4" enabled="false"/>
+          <reduction symbol="PRONOUN" rule="4" enabled="false"/>
+          <reduction symbol="$default" rule="4" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="9">
+      <itemset>
+        <item rule-number="11" point="1"/>
+        <item rule-number="13" point="0"/>
+        <item rule-number="14" point="0"/>
+        <item rule-number="15" point="0"/>
+        <item rule-number="16" point="0"/>
+        <item rule-number="17" point="0"/>
+        <item rule-number="18" point="0"/>
+        <item rule-number="19" point="0"/>
+      </itemset>
+      <actions>
+        <transitions>
+          <transition type="shift" symbol="NOUN" state="13"/>
+          <transition type="shift" symbol="PRONOUN" state="14"/>
+          <transition type="shift" symbol="VERB" state="15"/>
+          <transition type="shift" symbol="PREPOSITION" state="16"/>
+          <transition type="shift" symbol="ADJECTIVE" state="17"/>
+          <transition type="shift" symbol="ADVERB" state="18"/>
+          <transition type="shift" symbol="CONJUNCTION" state="19"/>
+          <transition type="goto" symbol="words" state="22"/>
+        </transitions>
+        <errors/>
+        <reductions/>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="10">
+      <itemset>
+        <item rule-number="0" point="2"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="accept" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="11">
+      <itemset>
+        <item rule-number="2" point="2"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="2" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="12">
+      <itemset>
+        <item rule-number="3" point="2"/>
+        <item rule-number="8" point="0"/>
+      </itemset>
+      <actions>
+        <transitions>
+          <transition type="shift" symbol="NOUN" state="23"/>
+          <transition type="goto" symbol="object" state="24"/>
+        </transitions>
+        <errors/>
+        <reductions/>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="13">
+      <itemset>
+        <item rule-number="13" point="1"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="13" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="14">
+      <itemset>
+        <item rule-number="14" point="1"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="14" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="15">
+      <itemset>
+        <item rule-number="15" point="1"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="15" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="16">
+      <itemset>
+        <item rule-number="16" point="1"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="16" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="17">
+      <itemset>
+        <item rule-number="17" point="1"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="17" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="18">
+      <itemset>
+        <item rule-number="18" point="1"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="18" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="19">
+      <itemset>
+        <item rule-number="19" point="1"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="19" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="20">
+      <itemset>
+        <item rule-number="10" point="2"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="10" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="21">
+      <itemset>
+        <item rule-number="9" point="2"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="9" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="22">
+      <itemset>
+        <item rule-number="11" point="2"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="11" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="23">
+      <itemset>
+        <item rule-number="8" point="1"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="8" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+
+    <state number="24">
+      <itemset>
+        <item rule-number="3" point="3"/>
+      </itemset>
+      <actions>
+        <transitions/>
+        <errors/>
+        <reductions>
+          <reduction symbol="$default" rule="3" enabled="true"/>
+        </reductions>
+      </actions>
+      <solved-conflicts/>
+    </state>
+  </automaton>
+</bison-xml-report>

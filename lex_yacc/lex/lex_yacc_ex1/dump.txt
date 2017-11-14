@@ -1,0 +1,8 @@
+declare!!
+call add_word,type=258 word=dog
+call add_word,type=258 word=cat
+call add_word,type=258 word=mouse
+call add_word,type=258 word=good
+call add_word,type=258 word=preson
+call add_word,type=258 word=thing
+Sentence is valid!!!

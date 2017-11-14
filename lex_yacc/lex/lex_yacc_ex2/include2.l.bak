@@ -1,0 +1,40 @@
+%{ 
+#include <stdio.h>
+int yywrap(void); 
+int yylex(void); 
+%} 
+
+/*增加标记状态*/
+%x _INCLUDE_ 
+%x _INCLUDE_FILE_
+
+%% 
+"#"[ \t]*"include"      
+{                                 
+  BEGIN _INCLUDE_;//进入_INCLUDE_状态                                 
+  printf("include: %s\n",yytext);
+} 
+
+<_INCLUDE_>[\"|<]       
+{                                 
+  BEGIN _INCLUDE_FILE_; /*进入_INCLUDE_FILE_状态*/
+  printf("begin close, symbol:%s\n",yytext);
+} 
+
+<_INCLUDE_FILE_>[^\">]* {
+  printf("headerfile:%s\n",yytext);
+} 
+
+<_INCLUDE_FILE_>[\"|>]  {
+  BEGIN INITIAL;          //恢复到初始状态，默认状态
+  printf("close include, symbol:%s\n", yytext);
+} 
+
+[ \t\n]       ;// 对于额外的空白都不处理直接扔掉
+. ;
+
+%%
+int yywrap(void) {
+  return 1;// 只处理一个输入文件
+}
+
