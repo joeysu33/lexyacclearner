@@ -1,6 +1,6 @@
-#line 2 "include2.l.c"
+#line 2 "wc.l.c"
 
-#line 4 "include2.l.c"
+#line 4 "wc.l.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -385,10 +385,9 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static yyconst flex_int16_t yy_accept[21] =
+static yyconst flex_int16_t yy_accept[9] =
     {   0,
-        0,    0,    5,    3,    2,    2,    3,    0,    0,    0,
-        0,    0,    0,    0,    0,    0,    0,    0,    1,    0
+        0,    0,    5,    1,    3,    2,    1,    0
     } ;
 
 static yyconst YY_CHAR yy_ec[256] =
@@ -396,16 +395,16 @@ static yyconst YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    4,    1,    5,    6,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    7,
-        1,    8,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    2,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    9,   10,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
 
-       11,    1,    1,    1,   12,    1,    1,   13,    1,   14,
-        1,    1,    1,    1,    1,    1,   15,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -423,44 +422,29 @@ static yyconst YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst YY_CHAR yy_meta[16] =
+static yyconst YY_CHAR yy_meta[4] =
     {   0,
-        1,    2,    1,    3,    4,    1,    5,    6,    1,    1,
-        1,    2,    1,    1,    1
+        1,    2,    2
     } ;
 
-static yyconst flex_uint16_t yy_base[25] =
+static yyconst flex_uint16_t yy_base[10] =
     {   0,
-        0,    5,   37,   38,   38,   38,   24,   23,   20,   24,
-       19,   16,   20,   17,    8,    1,    0,    5,   38,   38,
-       13,   18,   19,   24
+        0,    0,    5,    0,    6,    6,    0,    6,    3
     } ;
 
-static yyconst flex_int16_t yy_def[25] =
+static yyconst flex_int16_t yy_def[10] =
     {   0,
-       21,   21,   20,   20,   20,   20,   22,   22,   20,   20,
-       20,   20,   20,   20,   20,   23,   24,   24,   20,    0,
-       20,   20,   20,   20
+        8,    1,    8,    9,    8,    8,    9,    0,    8
     } ;
 
-static yyconst flex_uint16_t yy_nxt[54] =
+static yyconst flex_uint16_t yy_nxt[10] =
     {   0,
-       20,    5,    6,    5,   16,    7,    5,    6,    5,   19,
-        7,   16,   19,    4,    4,    4,    4,    4,    4,    8,
-        8,   17,   17,   17,   18,   18,   18,   15,   18,   14,
-       13,   12,   11,   10,    9,    9,   20,    3,   20,   20,
-       20,   20,   20,   20,   20,   20,   20,   20,   20,   20,
-       20,   20,   20
+        4,    5,    6,    7,    8,    3,    8,    8,    8
     } ;
 
-static yyconst flex_int16_t yy_chk[54] =
+static yyconst flex_int16_t yy_chk[10] =
     {   0,
-        0,    1,    1,    1,   16,    1,    2,    2,    2,   18,
-        2,   15,   18,   21,   21,   21,   21,   21,   21,   22,
-       22,   23,   23,   23,   24,   24,   24,   14,   24,   13,
-       12,   11,   10,    9,    8,    7,    3,   20,   20,   20,
-       20,   20,   20,   20,   20,   20,   20,   20,   20,   20,
-       20,   20,   20
+        1,    1,    1,    9,    3,    8,    8,    8,    8
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -477,14 +461,22 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "include2.l"
-#line 2 "include2.l"
+#line 1 "wc.l"
+#line 2 "wc.l"
 #include <stdio.h>
-int yywrap(void); 
+#include <assert.h>
+
 /*!
-lex中的空格不是\s ?????
+flex处理多个输入文件 yylex
 */
-#line 488 "include2.l.c"
+int yywrap();
+
+static int g_chars = 0, g_lines = 0, g_words = 0;
+static int g_filecount = 0;
+static int g_currentfile = 0;
+static char **g_filename = NULL;
+static FILE *g_oldstdin = NULL;
+#line 480 "wc.l.c"
 
 #define INITIAL 0
 
@@ -702,9 +694,9 @@ YY_DECL
 		}
 
 	{
-#line 9 "include2.l"
+#line 20 "wc.l"
 
-#line 708 "include2.l.c"
+#line 700 "wc.l.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -731,13 +723,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 21 )
+				if ( yy_current_state >= 9 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 38 );
+		while ( yy_base[yy_current_state] != 6 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -762,30 +754,27 @@ do_action:	/* This label is used only to access EOF actions. */
 			goto yy_find_action;
 
 case 1:
-/* rule 1 can match eol */
 YY_RULE_SETUP
-#line 10 "include2.l"
-{
-  printf("find match include: %s\n", yytext);
-}
+#line 21 "wc.l"
+{ g_words++; g_chars += yyleng; }
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 14 "include2.l"
-;// 对于额外的空白都不处理直接扔掉
+#line 22 "wc.l"
+{g_lines++; g_chars++;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 15 "include2.l"
-;
+#line 23 "wc.l"
+{g_chars++;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 17 "include2.l"
+#line 25 "wc.l"
 ECHO;
 	YY_BREAK
-#line 789 "include2.l.c"
+#line 778 "wc.l.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1078,7 +1067,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 21 )
+			if ( yy_current_state >= 9 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1106,11 +1095,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 21 )
+		if ( yy_current_state >= 9 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 20);
+	yy_is_jam = (yy_current_state == 8);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1786,11 +1775,98 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 17 "include2.l"
+#line 25 "wc.l"
 
 
-int yywrap(void) {
-  return 1;// 只处理一个输入文件
+void show(const char* source) {
+  static int times = 0;
+  //fprintf(stdout, "call show %d times\n", ++times);
+  fprintf(stdout, "file:%s lines:%-8d words:%-8d chars:%-8d\n", source,g_lines, g_words, g_chars);
 }
+
+void closefile() {
+  static int ntimes = 0;
+  //fprintf(stdout, "call close file:%d times\n", ++ntimes);
+  if(yyin && yyin != g_oldstdin) {
+    fclose(yyin);
+    yyin = g_oldstdin;
+  }
+  g_lines = 0;
+  g_words = 0;
+  g_chars = 0;
+}
+
+int main(int argc, char *argv[]) {
+  if(argc < 2 ) {
+    /*!文件数据来自stdin*/
+    yylex();
+    show("stdin");
+    return 0;
+  }
+
+  g_currentfile = 0;
+  g_filecount = argc - 1;
+  g_filename = &argv[1];
+  g_oldstdin = yyin;
+
+  //yydebug仅在yacc中可以使用
+  //yydebug = 1;
+  /*if(yyout != stdout) {
+    yyout = stdout;
+    printf("switch to stdout\n");
+  }*/
+
+  fprintf(stdout,"start to executed yywrap\n");
+  /*!指向第一个文件*/
+  yywrap();
+  yylex();
+
+  /*!关闭并打印最后一个文件信息*/
+  //printf("call XXXXXX\n");
+  //show(g_filename[g_currentfile]);
+  //closefile();
+
+  return 0;
+}
+
+int yywrap() {
+  static int times = 0;
+  //fprintf(stdout, "call yywrap %d times\n", ++times);
+
+  for(; g_filecount > 0; g_filecount--) {
+    if(!g_filename[g_currentfile]) {
+      g_currentfile++;
+      continue;
+    }
+
+    FILE *f = fopen(g_filename[g_currentfile],"r");
+    if(!f) {
+      g_currentfile++;
+      continue;
+    }
+
+    /*
+    打印上一次的信息，并关闭上次打开的文件
+    */
+    {
+      if(yyin != g_oldstdin) 
+        show(g_filename[g_currentfile]);
+      closefile();
+    }
+
+    yyin = f;
+    printf("file open success: %s\n", g_filename[g_currentfile]);
+    g_filecount--;
+    g_currentfile++;
+    return 0;
+  }
+
+  if(yyin != g_oldstdin && g_currentfile > 0) 
+    show(g_filename[g_currentfile-1]);
+  closefile();
+
+  return 1;
+}
+
 
 

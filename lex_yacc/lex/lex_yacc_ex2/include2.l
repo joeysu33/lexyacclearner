@@ -7,7 +7,7 @@ lex中的空格不是\s ?????
 %} 
 
 %% 
-#[ \t]*include[ ]+[\"|<].+[\"|>] {
+"#"[ \t]*"include"" "+[\"<][^\">]+[\">] {
   printf("find match include: %s\n", yytext);
 }
 

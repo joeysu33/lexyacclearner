@@ -1,6 +1,5 @@
-#line 2 "include2.l.c"
 
-#line 4 "include2.l.c"
+#line 3 "lex.yy.c"
 
 #define  YY_INT_ALIGNED short int
 
@@ -385,10 +384,9 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static yyconst flex_int16_t yy_accept[21] =
+static yyconst flex_int16_t yy_accept[9] =
     {   0,
-        0,    0,    5,    3,    2,    2,    3,    0,    0,    0,
-        0,    0,    0,    0,    0,    0,    0,    0,    1,    0
+        0,    0,    5,    1,    3,    2,    1,    0
     } ;
 
 static yyconst YY_CHAR yy_ec[256] =
@@ -396,16 +394,16 @@ static yyconst YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    2,    3,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    4,    1,    5,    6,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    7,
-        1,    8,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    2,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    9,   10,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
 
-       11,    1,    1,    1,   12,    1,    1,   13,    1,   14,
-        1,    1,    1,    1,    1,    1,   15,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -423,44 +421,29 @@ static yyconst YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst YY_CHAR yy_meta[16] =
+static yyconst YY_CHAR yy_meta[4] =
     {   0,
-        1,    2,    1,    3,    4,    1,    5,    6,    1,    1,
-        1,    2,    1,    1,    1
+        1,    2,    2
     } ;
 
-static yyconst flex_uint16_t yy_base[25] =
+static yyconst flex_uint16_t yy_base[10] =
     {   0,
-        0,    5,   37,   38,   38,   38,   24,   23,   20,   24,
-       19,   16,   20,   17,    8,    1,    0,    5,   38,   38,
-       13,   18,   19,   24
+        0,    0,    5,    0,    6,    6,    0,    6,    3
     } ;
 
-static yyconst flex_int16_t yy_def[25] =
+static yyconst flex_int16_t yy_def[10] =
     {   0,
-       21,   21,   20,   20,   20,   20,   22,   22,   20,   20,
-       20,   20,   20,   20,   20,   23,   24,   24,   20,    0,
-       20,   20,   20,   20
+        8,    1,    8,    9,    8,    8,    9,    0,    8
     } ;
 
-static yyconst flex_uint16_t yy_nxt[54] =
+static yyconst flex_uint16_t yy_nxt[10] =
     {   0,
-       20,    5,    6,    5,   16,    7,    5,    6,    5,   19,
-        7,   16,   19,    4,    4,    4,    4,    4,    4,    8,
-        8,   17,   17,   17,   18,   18,   18,   15,   18,   14,
-       13,   12,   11,   10,    9,    9,   20,    3,   20,   20,
-       20,   20,   20,   20,   20,   20,   20,   20,   20,   20,
-       20,   20,   20
+        4,    5,    6,    7,    8,    3,    8,    8,    8
     } ;
 
-static yyconst flex_int16_t yy_chk[54] =
+static yyconst flex_int16_t yy_chk[10] =
     {   0,
-        0,    1,    1,    1,   16,    1,    2,    2,    2,   18,
-        2,   15,   18,   21,   21,   21,   21,   21,   21,   22,
-       22,   23,   23,   23,   24,   24,   24,   14,   24,   13,
-       12,   11,   10,    9,    8,    7,    3,   20,   20,   20,
-       20,   20,   20,   20,   20,   20,   20,   20,   20,   20,
-       20,   20,   20
+        1,    1,    1,    9,    3,    8,    8,    8,    8
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -477,14 +460,20 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "include2.l"
-#line 2 "include2.l"
-#include <stdio.h>
-int yywrap(void); 
-/*!
-lex中的空格不是\s ?????
-*/
-#line 488 "include2.l.c"
+#line 1 "ch2-03.l"
+#line 2 "ch2-03.l"
+/*
+ * ch2-03.l
+ *
+ * The word counter example for multiple files
+ *
+ */
+
+unsigned long charCount = 0, wordCount = 0, lineCount = 0;
+
+#undef yywrap	/* sometimes a macro by default */
+
+#line 477 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -702,9 +691,9 @@ YY_DECL
 		}
 
 	{
-#line 9 "include2.l"
+#line 17 "ch2-03.l"
 
-#line 708 "include2.l.c"
+#line 697 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -731,13 +720,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 21 )
+				if ( yy_current_state >= 9 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 38 );
+		while ( yy_base[yy_current_state] != 6 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -762,30 +751,27 @@ do_action:	/* This label is used only to access EOF actions. */
 			goto yy_find_action;
 
 case 1:
-/* rule 1 can match eol */
 YY_RULE_SETUP
-#line 10 "include2.l"
-{
-  printf("find match include: %s\n", yytext);
-}
+#line 18 "ch2-03.l"
+{ wordCount++; charCount += yyleng; }
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 14 "include2.l"
-;// 对于额外的空白都不处理直接扔掉
+#line 19 "ch2-03.l"
+{ charCount++; lineCount++; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 15 "include2.l"
-;
+#line 20 "ch2-03.l"
+charCount++;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 17 "include2.l"
+#line 21 "ch2-03.l"
 ECHO;
 	YY_BREAK
-#line 789 "include2.l.c"
+#line 775 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1078,7 +1064,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 21 )
+			if ( yy_current_state >= 9 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1106,11 +1092,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 21 )
+		if ( yy_current_state >= 9 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 20);
+	yy_is_jam = (yy_current_state == 8);
 
 		return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1786,11 +1772,93 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 17 "include2.l"
+#line 21 "ch2-03.l"
 
 
-int yywrap(void) {
-  return 1;// 只处理一个输入文件
+
+char **fileList;
+unsigned currentFile = 0;
+unsigned nFiles;
+unsigned long totalCC = 0;
+unsigned long totalWC = 0;
+unsigned long totalLC = 0;
+
+main(argc,argv)
+int argc;
+char **argv;
+{
+        FILE *file;
+
+        fileList = argv+1;
+        nFiles = argc-1;
+
+        if (argc == 2) {
+		/*
+		 * we handle the single file case differently from
+		 * the multiple file case since we don't need to
+		 * print a summary line
+		 */
+		currentFile = 1;
+		file = fopen(argv[1], "r");
+		if (!file) {
+			fprintf(stderr,"could not open %s\n",argv[1]);
+			exit(1);
+		}
+		yyin = file;
+        }
+        if (argc > 2)
+		yywrap();	/* open first file */
+
+	yylex();
+        /*
+         * once again, we handle zero or one file
+	 * differently from multiple files.
+         */
+        if (argc > 2) {
+		printf("%8lu %8lu %8lu %s\n", lineCount, wordCount,
+			charCount, fileList[currentFile-1]);
+		totalCC += charCount;
+		totalWC += wordCount;
+		totalLC += lineCount;
+		printf("%8lu %8lu %8lu total\n",totalLC, totalWC, totalCC);
+	} else
+		printf("%8lu %8lu %8lu\n",lineCount, wordCount, charCount);
+
+	return 0;
 }
 
+/*
+ * the lexer calls yywrap to handle EOF conditions (e.g., to
+ * connect to a new file, as we do in this case.)
+ */
+
+yywrap()
+{
+	FILE *file;
+
+	if ((currentFile != 0) && (nFiles > 1) && (currentFile < nFiles)) {
+		/*
+		 * we print out the statistics for the previous file.
+		 */
+		printf("%8lu %8lu %8lu %s\n", lineCount, wordCount,
+			charCount, fileList[currentFile-1]);
+		totalCC += charCount;
+		totalWC += wordCount;
+		totalLC += lineCount;
+		charCount = wordCount = lineCount = 0;
+		fclose(yyin);	/* done with that file */
+	}
+
+	while (fileList[currentFile] != (char *)0) {
+		file = fopen(fileList[currentFile++], "r");
+		if (file != NULL) {
+			yyin = file;
+			break;
+		}
+		fprintf(stderr,
+			"could not open %s\n",
+			fileList[currentFile-1]);
+	}
+	return (file ? 0 : 1);	/* 0 means there's more input */
+}
 
