@@ -23,7 +23,7 @@ typedef struct {
 typedef struct {
   int oper;  /* operator */
   int nops;  /* number of operands */
-  struct NodeTypeTag *op[1]; /* operands (expandable) */
+  struct NodeTypeTag *op[6]; /* operands (expandable) ,max of operands is 6*/
 } OprNodeType;
 
 /* node type tag*/

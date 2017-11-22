@@ -1,7 +1,7 @@
 %{
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdargs.h>
+#include <stdarg.h>
 
 #include "calc2.h"
 
@@ -65,7 +65,7 @@ stmt : ';' { $$ = opr(';', 2, NULL, NULL); }
      ;
 
 stmt_list: stmt {$$ = $1; }
-         | stmt_list stmt { $$ = opr(';', 2 $1, $2); }
+         | stmt_list stmt { $$ = opr(';', 2, $1, $2); }
          ;
 
 expr: INTEGER {$$ = con($1); }
@@ -99,7 +99,7 @@ NodeType *con (int value) {
 NodeType* id(int i) {
   NodeType *p = newNode();
   p->type = TypeId;
-  p->id = i;
+  p->id.i = i;
   return p;
 }
 
@@ -146,7 +146,7 @@ void freeNode(NodeType* p) {
 
 
 void yyerror(char *s) {
-  fprintf(stderr, "yyerror: %s\n" s);
+  fprintf(stderr, "yyerror: %s\n", s);
 }
 
 int main() {
